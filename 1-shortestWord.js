@@ -8,18 +8,28 @@ types.
 function findShort(s) {
   listOfWords = s.split(" ");
   // console.log("words: ", listOfWords);
-  let lengthsList = []
+  let lengthsList = [];
   listOfWords.map(word => {
-    lengthsList.push(word.length)
-  })
+    lengthsList.push(word.length);
+  });
   // console.log(lengthsList)
   // console.log(lengthsList.sort(function(a, b){return a-b}))
-  lengthsList.sort(function(a, b){return a-b})
-  let smallestLength = lengthsList[0]
+  lengthsList.sort(function(a, b) {
+    return a - b;
+  });
+  let smallestLength = lengthsList[0];
 
-  return smallestLength
+  return smallestLength;
 }
 
-console.log(findShort("bitcoin take over the world maybe who knows perhaps"))
-console.log(findShort("turns out random test cases are easier than writing out basic ones"))
-console.log(findShort("MadeSafeCoin 21inc LiteCoin Ethereum ProofOfWork Lisk Dash Bitcoin Waves Steem Lisk"))
+console.log(findShort("bitcoin take over the world maybe who knows perhaps"));
+console.log(
+  findShort(
+    "turns out random test cases are easier than writing out basic ones"
+  )
+);
+console.log(
+  findShort(
+    "MadeSafeCoin 21inc LiteCoin Ethereum ProofOfWork Lisk Dash Bitcoin Waves Steem Lisk"
+  )
+);

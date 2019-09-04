@@ -12,18 +12,18 @@ as n^3 + (n-1)^3 + ... + 1^3 = m if such a n exists or -1 if there is no such n.
 */
 
 function findNb(m) {
-  let x = 1
-  let num = 0
+  let x = 1;
+  let num = 0;
   while (num < m) {
-    num += x ** 3
-    x += 1
+    num += x ** 3;
+    x += 1;
   }
-  return (num === m) ? (x-1) : -1
+  return num === m ? x - 1 : -1;
 }
 
-console.log(findNb(1071225))
-console.log(findNb(4183059834009))
-console.log(findNb(24723578342962))
-console.log(findNb(36))
-console.log(findNb(135440716410000))
-console.log(findNb(91716553919377))
+console.log(findNb(1071225));
+console.log(findNb(4183059834009));
+console.log(findNb(24723578342962));
+console.log(findNb(36));
+console.log(findNb(135440716410000));
+console.log(findNb(91716553919377));
